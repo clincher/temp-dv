@@ -16,8 +16,6 @@ import json
 @render_to('shop/group.html')
 def group(request, id=None):
 
-    print ProductGroup.objects.filter(productgroup=None)
-
     if id:
         group = get_object_or_404(ProductGroup, id=id)
         groups = group.sub_groups.all()
